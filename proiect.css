@@ -1,0 +1,363 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'PT Sans', sans-serif;
+
+}
+body{
+    background-color: beige;
+
+}
+
+nav{
+    background-color: #2B2D42;
+    height: 82px;
+    width:100%;
+    z-index: 10;
+    position: sticky;
+    top: 0px;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    margin-right: 20px;
+    float: right;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+} 
+nav ul li a{
+    font-size: 17px;
+    text-transform: uppercase;
+    color: white;
+    padding: 7px 13px;
+    border-radius: 30px;  
+}
+
+nav ul li a:hover{
+    background-color: #8D99AE;
+    color: #2B2D42;
+    transition: .3s;
+} 
+
+nav ul li ul {
+  position: absolute;
+  width: 200px;
+  display: none;
+}
+nav ul li ul li { 
+  background-color: #2B2D42; 
+  display: block; 
+}
+nav ul li ul li a {
+    display:block ;
+} 
+nav ul li:hover ul {
+    display: block;
+    transition: .3s
+}
+nav ul li ul li:hover {
+    background-color: #8D99AE;
+    transition: .3s
+}
+
+.checkbtn{
+    font-size: 30px;
+    color:white;
+    float: right;
+    display:none;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.checkbtn:hover{
+    color:#555881;
+    transition: .3s;
+}
+
+#check{
+    display:none;
+}
+
+.buttoncurs{
+    cursor: pointer;
+}
+
+@media (max-width: 1090px){
+    nav ul li a{
+        font-size: 13px;
+        padding: 0px 13px;
+    }
+}
+
+@media (max-width: 980px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position:fixed;
+        width: 100%;
+        height: 100vh;
+        background: #8D99AE;
+        top:80px;
+        left: -100%;
+        text-align: center;
+        transition: all .1s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    nav ul li a:hover{
+        background: #2B2D42;
+        color: white;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+.banner{
+
+    position: relative;
+    margin: auto;
+    width: 100%;
+    z-index: -5px;
+    background: url(https://images.squarespace-cdn.com/content/v1/5e1680dcaa582834ce785d84/1579978589642-O3MF196EF04K5MV8T6VH/IBDC+Ballroom+Dance+Competition.jpeg), no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 570px;
+}
+
+.heading{
+    /* position: absolute; */
+    text-align: center;
+    width: 100%;
+    top: 37%;
+    position: relative;
+}
+
+.heading span{
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-size: 130px;
+    text-transform: uppercase;
+    animation: anima 1s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+
+@keyframes anima
+{
+    0%{
+        transform: translateY(0px);
+    }
+    20%{
+        transform: translateY(-20px);
+    }
+    40%, 100%{
+        transform: translateY(0px);
+    }
+}
+
+.div1{
+    margin-top: 70px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 50px;
+    font-size:20px;
+    color: solid black;
+    text-align: center;
+    font-style: bold; 
+}
+
+h1{
+    border: 15px solid rgb(253, 61, 125);
+}
+.div2{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    font-size:24px;
+    color: solid black;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.anim1{
+    width:200px;
+    height: 50px;
+    background-color:rgb(253, 61, 125);
+    color:black;
+    font-size: 30px;
+    margin: 30px;
+    padding: 20px;
+    text-align: center;
+    line-height: 10px;
+    border-radius: 15px;
+    
+}
+
+.anim1:hover{
+    animation: anim1 3s;
+}
+
+@keyframes anim1{
+    0%{background-color:rgb(253, 61, 125);
+       transform: translate(0) rotate(0);
+
+    }
+    33%{
+        left: 400px;
+    }
+    66%{
+        transform: translate(400px) rotate(1turn);
+    }
+    
+    100%{
+        transform: translate(0) rotate(1turn);
+    }
+}
+
+.anim2{
+    width:200px;
+    height: 50px;
+    background-color:#63ADF2;
+    color:black;
+    font-size: 30px;
+    margin: 30px;
+    padding: 20px;
+    text-align: center;
+    line-height: 10px;
+    border-radius: 15px;
+}
+
+.anim2:hover{
+    animation: anim2 3s;
+}
+
+@keyframes anim2{
+    0%{background-color:#63ADF2;
+    }
+    25%{background-color:#2978A0;
+        color: white;
+    }
+    50%{background-color:#0E103D;
+        color: white;
+    }
+    75%{background-color:#A1D3FF;
+    }
+    100%{background-color:#63ADF2;
+    }
+}
+
+.Echipa{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+
+}
+
+.flip-card {
+    width: 300px;
+    height: 350px;
+    perspective: 1000px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: rgb(150, 242, 248);
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #2978A0;
+    color: white;
+    transform: rotateY(180deg);
+    padding-top: 70px;
+  }
+.nume{
+      
+    font-size: 50px;
+    font-style:bold;
+    border: none;
+
+}
+.job{
+    font-size: 40px;
+    border: none;
+}
+
+.info{
+    background-color: #2B2D42;
+    height: 200px;
+    width:100%;
+    bottom: 0px;
+    top:50px;
+}
+.contact{
+    color: #7e8094;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 25px;
+    margin-left:40px;
+    padding-top: 20px;
+
+}
+.inside{
+    color: #7e8094;
+    font-size: 17px;
+    margin-left:40px;
+    padding-top: 20px;
+}
+.inside div{
+    padding-bottom: 7px;
+}
+#map{
+    display:none;
+    bottom: 0;
+}
+#adresa{
+    color:#7e8094;
+}
